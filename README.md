@@ -43,11 +43,28 @@ npx shadcn@latest add button card input form
 
 ## Full Documentation
 
-See the golden-stack skill in repo_docs for complete patterns including:
-- Database setup with asyncpg connection pooling
-- LLM streaming architecture (HTTPX + SSE)
-- Railway deployment configuration
-- Pydantic schemas and typed API clients
+See the [repo_docs](https://github.com/StrongPromptAI/repo_docs) repository for complete patterns:
+
+| Resource | Description |
+|----------|-------------|
+| `skills/golden_stack/SKILL.md` | Full stack patterns, UV, FastAPI, React |
+| `skills/golden_stack/STREAMING.md` | LLM streaming (HTTPX + SSE) |
+| `skills/railway/SKILL.md` | Railway deployment guide |
+
+## Cursor Users
+
+See `skills/README_CURSOR.md` in repo_docs for:
+- How to use skills with `@` mentions
+- Starter `.cursor/rules` template
+- Best practices for keeping context minimal
+
+Quick setup - add to your `.cursor/rules`:
+```markdown
+# Golden Stack Project
+Backend: `uv run uvicorn backend.app.main:app --reload --port 8001`
+Frontend: `cd frontend && npm run dev`
+For patterns: @repo_docs/skills/golden_stack/SKILL.md
+```
 
 ## License
 
